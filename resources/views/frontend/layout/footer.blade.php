@@ -3,7 +3,7 @@
     <div class="container">
         <div class="fl-wrap footer-inner">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="footer-logo">
                         @if ($setting->first()->footer_logo != null)
                             <a href="{{ url('/') }}"><img src="{{ asset('uploads/setting') }}/{{ $setting->first()->footer_logo }}" alt=""></a>
@@ -15,8 +15,8 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="footer-header fl-wrap"><span>01.</span> Contacts</div>
+                <div class="col-md-6">
+                    <div class="footer-header fl-wrap"> Contacts</div>
                     <!-- footer-contacts-->
                     <div class="footer-contacts footer-box fl-wrap">
                         <ul>
@@ -33,19 +33,6 @@
                     </div>
                     <!-- footer contacts end -->
                     <a href="contacts.html" class="ajax fc_button">Get In Touch <i class="fal fa-envelope"></i></a>
-                </div>
-                <div class="col-md-4">
-                    <div class="footer-header fl-wrap"><span>02.</span> Subscribe</div>
-                    <div class="footer-box fl-wrap">
-                        <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll send you a notification by email.</p>
-                        <div class="subcribe-form fl-wrap">
-                            <form id="subscribe" class="fl-wrap">
-                                <input class="enteremail" name="email" id="subscribe-email" placeholder="Your Email" spellcheck="false" type="text">
-                                <button type="submit" id="subscribe-button" class="subscribe-button">  Send  <i class="fal fa-long-arrow-right"></i></button>
-                                <label for="subscribe-email" class="subscribe-message"></label>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
