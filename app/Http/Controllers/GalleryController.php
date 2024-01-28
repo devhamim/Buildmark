@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\gallery;
+use App\Models\multigallery;
 use Illuminate\Http\Request;
 use Str;
 
@@ -30,28 +31,51 @@ class GalleryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $rules = [
-            'title'         =>'required',
-            'image'         =>'',
-            'address'        =>'',
-        ];
+    public function store(Request $request){
+            $rules = [
+                'title' => 'required',
+                'image' => '',
+                'address' => '',
+                'description' => '',
+            ];
 
-        $validatesData = $request->validate($rules);
+            $validatedData = $request->validate($rules);
 
-        if($request->hasFile('image')){
-            $image = $request->file('image');
-            $extension = $image->getClientOriginalExtension();
-            $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
-            $image->move(public_path('uploads/gallery'), $file_name);
-            $validatesData['image'] = $file_name; 
+            // image
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $extension = $image->getClientOriginalExtension();
+                $file_name = Str::random(5) . rand(1000, 999999) . '.' . $extension;
+                $image->move(public_path('uploads/gallery'), $file_name);
+                $validatedData['image'] = $file_name;
+            }
+
+            // Create gallery entry
+            $portfolio = gallery::create($validatedData);
+
+            // Get the portfolio ID
+            $portfolio_id = $portfolio->id;
+
+            $galleryFiles = [];
+            // gallery
+            if ($request->hasFile('gallery')) {
+                foreach ($request->file('gallery') as $file) {
+                    $extension = $file->getClientOriginalExtension();
+                    $file_name = Str::random(5) . rand(1000, 999999) . '.' . $extension;
+                    $file->move(public_path('uploads/gallery'), $file_name);
+                    $galleryFiles[] = [
+                        'protfolio_id' => $portfolio_id,
+                        'gallery' => $file_name,
+                    ];
+                }
+
+                // Insert into multigalleries table
+                multigallery::insert($galleryFiles);
+            }
+
+            toast('Add Success', 'success');
+            return back();
         }
-        
-        gallery::create($validatesData);
-        toast('Add Success','success');
-        return back();
-    }
 
     /**
      * Display the specified resource.
@@ -91,13 +115,16 @@ class GalleryController extends Controller
             $extension = $image->getClientOriginalExtension();
             $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
             $image->move(public_path('uploads/gallery'), $file_name);
-            $validatesData['image'] = $file_name; 
+            $validatesData['image'] = $file_name;
         }
-        
+
         gallery::where('id', $id)->update($validatesData);
-        toast('Update Success','success');   
+        toast('Update Success','success');
         return redirect()->route('gallery.index');
     }
+
+
+
 
     /**
      * Remove the specified resource from storage.

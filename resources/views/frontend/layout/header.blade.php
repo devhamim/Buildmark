@@ -62,21 +62,21 @@
                             <nav class="nav-inner" id="menu">
                                 <ul>
                                     <li>
-                                        <a href="{{ url('/') }}">Home</a>
-
+                                        <a href="{{ url('/') }}" class="act-link">Home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('about_us') }}">About</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('cpm.view') }}">CPM</a>
+                                        <a href="{{ route('cpm.view') }}">TEAM</a>
                                     </li>
+                                    <li><a href="{{ route('services') }}" class="ajax">Specialized Services</a></li>
                                     <li>
-                                        <a href="{{ route('projects') }}">Project</a>
+                                        <a href="{{ route('projects') }}">Portfolio</a>
                                     </li>
-                                    <li><a href="{{ route('services') }}" class="ajax">Services</a></li>
-                                    <li><a href="{{ route('concern') }}" class="ajax">Concern</a></li>
-                                    <li><a href="{{ route('contect') }}" class="ajax">Contacts</a></li>
+
+                                    <li><a href="{{ route('project.list') }}" class="ajax">Project List</a></li>
+                                    <li><a href="{{ route('contect') }}" class="ajax">Contact</a></li>
                                 </ul>
                             </nav>
                             <!-- nav end-->

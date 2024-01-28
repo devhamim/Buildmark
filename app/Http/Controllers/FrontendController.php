@@ -14,6 +14,7 @@ use App\Models\setting;
 use App\Models\team;
 use App\Models\blogComment;
 use App\Models\media;
+use App\Models\multigallery;
 use App\Models\privacyPolicy;
 use App\Models\product;
 use App\Models\video;
@@ -111,6 +112,15 @@ class FrontendController extends Controller
             'projects'=>$projects,
         ]);
     }
+    // projects_details
+    function projects_details($id){
+        $project_id = multigallery::where('protfolio_id', $id)->get();
+        $projects = gallery::where('id', $id)->get();
+        return view('frontend.gallery_details',[
+            'project_id'=>$project_id,
+            'projects'=>$projects,
+        ]);
+    }
     //our_team
     function our_team(){
         $teams = team::where('status', 1)->get();
@@ -157,10 +167,18 @@ class FrontendController extends Controller
 
     // cpm_view
     function cpm_view(){
-        return view('frontend.cpm');
+        $teams = team::where('status', 1)->get();
+        return view('frontend.cpm',[
+            'teams'=>$teams,
+        ]);
     }
     // concern
     function concern(){
         return view('frontend.concern');
+    }
+
+    // project_list
+    function project_list(){
+        return view('frontend.projectList');
     }
 }

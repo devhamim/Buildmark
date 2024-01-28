@@ -23,7 +23,7 @@
                         <div class="col-12">
                             <label class="form-label">Address</label>
                             <input type="text" name="address" class="form-control form-control-sm" value="{{ $gallerys->address }}">
-                        </div> 
+                        </div>
                         <div class="col-12">
                             <div class="upload-category-thumbnail">
                                 <label class="form-label" id="addCatThumb">Image</label>
@@ -32,6 +32,19 @@
                             <div class="my-3">
                                 <img width="100" id="blah" src="{{ asset('uploads/gallery') }}/{{ $gallerys->image }}" alt="">
                             </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="upload-category-thumbnail">
+                                <label class="form-label" id="addCatThumb">Gallery</label>
+                                <input type="file" name="gallery[]" multiple class="form-control" id="thumbUpload" value="{{ $gallerys->gallery }}">
+                            </div>
+                            <div class="my-3">
+                                <img width="100" id="blah" src="{{ asset('uploads/gallery') }}/{{ $gallerys->gallery }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" class="form-control form-control-sm" id="" cols="30" rows="5">{{ $gallerys->address }}</textarea>
                         </div>
                         <div class="col-12">
                             <label class="form-label">Status</label>
@@ -50,6 +63,6 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection

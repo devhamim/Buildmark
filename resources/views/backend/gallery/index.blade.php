@@ -23,9 +23,17 @@
                             <label class="form-label">Image</label>
                             <input type="file" name="image" class="form-control form-control-sm @error('image') is-invalid @enderror" value="{{ old('image') }}">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <label class="form-label">Gallery</label>
+                            <input type="file" name="gallery[]" multiple class="form-control form-control-sm @error('gallery') is-invalid @enderror" value="{{ old('gallery') }}">
+                        </div>
+                        <div class="col-sm-6">
                             <label class="form-label">Address</label>
                             <input type="text" name="address" class="form-control form-control-sm @error('address') is-invalid @enderror" value="{{ old('address') }}">
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" id="" class="form-control form-control-sm @error('description') is-invalid @enderror" cols="30" rows="5">{{ old('description') }}</textarea>
                         </div>
                         <div class="col-12 d-flex justify-content-end">
                             <div class="btn-box">
@@ -96,7 +104,7 @@
                                 </td>
                                 <td>
                                     <div class="btn-box">
-                                        <a href="{{ route('gallery.edit', $gallery->id) }}"><i class="fa-light fa-pen-to-square"></i></a>
+                                        {{-- <a href="{{ route('gallery.edit', $gallery->id) }}"><i class="fa-light fa-pen-to-square"></i></a> --}}
                                         <form action="{{ route('gallery.destroy',  $gallery->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')

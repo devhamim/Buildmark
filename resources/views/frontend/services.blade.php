@@ -24,8 +24,7 @@
             </div>
             <!--fixed-column-wrap_title-->
             <div class="fixed-column-wrap_title first-tile_load">
-                <h2>Our Services</h2>
-                <p>Design and Built.</p>
+                <h2>Specialized Services</h2>
             </div>
             <!--fixed-column-wrap_title end-->
             <div class="fixed-column-dec"></div>
@@ -60,15 +59,11 @@
                             <div class="serv-text fl-wrap">
                                 <div class="pr-bg pr-bg-white"></div>
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                         <p>{{ $service->sort_desp }}</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="section-number right_sn">
-                            <div class="pr-bg pr-bg-white"></div>
-                            <span>0</span>1.
                         </div>
                     </div>
                 </section>
@@ -76,13 +71,6 @@
             <!--section end-->
             <div class="section-separator"></div>
             <div class="clearfix"></div>
-            <div class="container">
-                <div class="order-wrap dark-bg fl-wrap">
-                    <div class="pr-bg pr-bg-white"></div>
-                    <h4>Ready to order Your Project ? </h4>
-                    <a href="{{ route('contect') }}" class="ajax">Get In Touch <i class="fal fa-envelope"></i></a>
-                </div>
-            </div>
         </div>
         <!--column-wrap-container end-->
     </div>

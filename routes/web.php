@@ -21,7 +21,6 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserRegController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,15 +47,17 @@ Route::get('/our-portfolio', [FrontendController::class, 'our_portfolio'])->name
 Route::get('/our-blog', [FrontendController::class, 'our_blog'])->name('our.blog');
 Route::get('/our-blog/details/{slug}', [FrontendController::class, 'our_blog_details'])->name('our.blog.details');
 Route::get('/contect', [FrontendController::class, 'contect'])->name('contect');
-Route::get('/projects', [FrontendController::class, 'projects'])->name('projects');
+Route::get('/protfolios', [FrontendController::class, 'projects'])->name('projects');
+Route::get('/protfolios/details/{id}', [FrontendController::class, 'projects_details'])->name('projects.details');
 Route::get('/our/team', [FrontendController::class, 'our_team'])->name('our.team');
 Route::get('/our/concern', [FrontendController::class, 'our_clients'])->name('our.clients');
 Route::get('/our/privacy/policy', [FrontendController::class, 'our_privacy_policy'])->name('our.privacy.policy');
 Route::get('/our/product', [FrontendController::class, 'our_product'])->name('our.product');
 Route::get('/our/media', [FrontendController::class, 'our_media'])->name('our.media');
 Route::get('/register/dealerform', [FrontendController::class, 'register_dealerform'])->name('register.dealerform');
-Route::get('/cpm/view', [FrontendController::class, 'cpm_view'])->name('cpm.view');
+Route::get('/team/view', [FrontendController::class, 'cpm_view'])->name('cpm.view');
 Route::get('/concern', [FrontendController::class, 'concern'])->name('concern');
+Route::get('/project/list', [FrontendController::class, 'project_list'])->name('project.list');
 
 Route::post('/blog/comment', [BlogController::class, 'blog_comment'])->name('blog.comment');
 Route::get('/dealerform/visiting/{id}', [DealerFormController::class, 'dealerform_visiting'])->name('dealerform.visiting');

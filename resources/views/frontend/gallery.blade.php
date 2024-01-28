@@ -92,22 +92,20 @@
                                 <ul>
                                     <li>
                                         <a href="{{ url('/') }}" class="act-link">Home</a>
-
                                     </li>
                                     <li>
                                         <a href="{{ route('about_us') }}">About</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('cpm.view') }}">CPM</a>
+                                        <a href="{{ route('cpm.view') }}">TEAM</a>
                                     </li>
+                                    <li><a href="{{ route('services') }}" class="ajax">Specialized Services</a></li>
                                     <li>
-                                        <a href="{{ route('projects') }}">Project</a>
-
+                                        <a href="{{ route('projects') }}">Portfolio</a>
                                     </li>
 
-                                    <li><a href="{{ route('services') }}" class="ajax">Services</a></li>
-                                    <li><a href="{{ route('concern') }}" class="ajax">Concern</a></li>
-                                    <li><a href="{{ route('contect') }}" class="ajax">Contacts</a></li>
+                                    <li><a href="{{ route('project.list') }}" class="ajax">Project List</a></li>
+                                    <li><a href="{{ route('contect') }}" class="ajax">Contact</a></li>
                                 </ul>
                             </nav>
                             <!-- nav end-->
@@ -167,8 +165,12 @@
                                     <div class="portfolio_item {{ $project_cat }}">
                                         <div class="grid-item-holder">
                                             <img  src="{{ asset('uploads/gallery') }}/{{ $project->image }}"    alt="">
+
                                             <div class="grid-det">
-                                                <div class="grid-det_category"><a >{{ $project->address }}</a></div>
+                                                <div class="grid-det_category"><a href="{{ route('projects.details', $project->id) }}">{{ $project->title }}</a></div>
+                                                <div class="grid-det-item">
+                                                    <a href="{{ route('projects.details', $project->id) }}" class="ajax grid-det_link">{{ $project->address }}<i class="fal fa-long-arrow-right"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="pr-bg"></div>

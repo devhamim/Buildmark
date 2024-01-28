@@ -36,10 +36,8 @@ class TeamController extends Controller
             'name'=>'required',
             'post'=>'required',
             'image'=>'',
-            'facebook'=>'',
-            'instagram'=>'',
-            'linkedin'=>'',
-            'github'=>'',
+            'education'=>'',
+            'description'=>'',
         ];
 
         $validatesData = $request->validate($rules);
@@ -49,11 +47,11 @@ class TeamController extends Controller
             $extension = $image->getClientOriginalExtension();
             $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
             $image->move(public_path('uploads/team'), $file_name);
-            $validatesData['image'] = $file_name; 
+            $validatesData['image'] = $file_name;
         }
 
         team::create($validatesData);
-        toast('Add Success','success');   
+        toast('Add Success','success');
         return back();
     }
 
@@ -85,10 +83,8 @@ class TeamController extends Controller
             'name'=>'required',
             'post'=>'required',
             'image'=>'',
-            'facebook'=>'',
-            'instagram'=>'',
-            'linkedin'=>'',
-            'github'=>'',
+            'education'=>'',
+            'description'=>'',
             'status'=>'',
         ];
 
@@ -99,11 +95,11 @@ class TeamController extends Controller
             $extension = $image->getClientOriginalExtension();
             $file_name = Str::random(5). rand(1000, 999999). '.'.$extension;
             $image->move(public_path('uploads/team'), $file_name);
-            $validatesData['image'] = $file_name; 
+            $validatesData['image'] = $file_name;
         }
 
         team::where('id', $id)->update($validatesData);
-        toast('Update Success','success');   
+        toast('Update Success','success');
         return redirect()->route('team.index');
     }
 

@@ -27,20 +27,12 @@
                             <input type="file" name="image" class="form-control form-control-sm @error('image') is-invalid @enderror" value="{{ old('image') }}">
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Facebook</label>
-                            <input type="text" name="facebook" class="form-control form-control-sm" value="{{ old('facebook') }}">
+                            <label class="form-label">Education</label>
+                            <input type="text" name="education" class="form-control form-control-sm" value="{{ old('education') }}">
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Instagram</label>
-                            <input type="text" name="instagram" class="form-control form-control-sm" value="{{ old('instagram') }}">
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label">LinkedIn</label>
-                            <input type="text" name="linkedin" class="form-control form-control-sm" value="{{ old('linkedin') }}">
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label">GitHub</label>
-                            <input type="text" name="github" class="form-control form-control-sm" value="{{ old('github') }}">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" id="" class="form-control form-control-sm" cols="30" rows="5">{{ old('description') }}</textarea>
                         </div>
                         <div class="col-12 d-flex justify-content-end">
                             <div class="btn-box">
@@ -59,7 +51,7 @@
                 <div class="btn-box d-flex gap-2">
                     <div id="tableSearch"></div>
                     <div class="digi-dropdown dropdown">
-                        
+
                     </div>
                 </div>
             </div>
@@ -67,7 +59,7 @@
                 <div class="table-filter-option">
                     <div class="row justify-content-between g-3">
                         <div class="col-xxl-4 col-6 col-xs-12">
-                            
+
                         </div>
                         <div class="col-xl-2 col-3 col-xs-12 d-flex justify-content-end">
                             <div id="productTableLength"></div>

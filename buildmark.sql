@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 24, 2024 at 05:24 PM
+-- Generation Time: Jan 28, 2024 at 12:16 PM
 -- Server version: 10.6.16-MariaDB-cll-lve
 -- PHP Version: 8.1.26
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `modern_modernbdf`
+-- Database: `nugorxyz_buildmark`
 --
 
 -- --------------------------------------------------------
@@ -91,7 +91,11 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `title`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(3, NULL, NULL, 'XHIlj828120.jpg', 1, '2023-11-01 04:14:07', '2024-01-10 04:57:06');
+(11, 'PERSONAL AND ELEGANT RESIDENCE', NULL, 'pvgQ8745687.jpg', 1, '2024-01-27 10:01:48', '2024-01-27 11:14:52'),
+(12, 'DESIGN OF CLASSY AND STYLISH BUILDING', NULL, 'O7LxG598733.jpg', 1, '2024-01-27 10:04:03', '2024-01-27 10:04:03'),
+(13, 'DESIGN OF TRISHAL ECONOMIC ZONE DORMITORY BUILDING', NULL, 'SRWjV661566.jpg', 1, '2024-01-27 10:06:32', '2024-01-27 10:06:32'),
+(14, 'DESIGN AND RENOVATION OF FLAT IN DHAKA', NULL, 'aUP4a678854.jpeg', 1, '2024-01-27 10:09:06', '2024-01-27 11:14:27'),
+(15, 'LUXURY DUPLEX DESIGN AND BUILD', NULL, 'uI0Id528384.jpeg', 1, '2024-01-27 10:09:23', '2024-01-27 11:16:04');
 
 -- --------------------------------------------------------
 
@@ -185,13 +189,6 @@ CREATE TABLE `customer_messages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `customer_messages`
---
-
-INSERT INTO `customer_messages` (`id`, `name`, `email`, `phone`, `subject`, `message`, `created_at`, `updated_at`) VALUES
-(1, 'Ina Lindsey', 'fytijoco@mailinator.com', '+1 (297) 242-2658', 'Corrupti quos aliqu', 'Quaerat quis cupidat', '2023-10-30 01:29:13', '2023-10-30 01:29:13');
 
 -- --------------------------------------------------------
 
@@ -304,9 +301,7 @@ INSERT INTO `galleries` (`id`, `title`, `image`, `address`, `status`, `created_a
 (7, 'Office Meeting', 'hWypo862004.jpg', NULL, 1, '2023-11-01 04:22:30', '2023-11-01 04:22:30'),
 (8, 'Office Meeting', 'BAOTB336220.jpg', NULL, 1, '2023-11-01 04:22:38', '2023-11-01 04:22:38'),
 (9, 'Office Meeting', 'CYwx972349.jpg', NULL, 1, '2023-11-01 04:22:44', '2023-11-01 04:22:44'),
-(10, 'Office Meeting', 'j2ImC562264.jpg', NULL, 1, '2023-11-01 04:22:51', '2023-11-01 04:22:51'),
-(11, 'Office Meeting', 'uGlYY813498.jpg', NULL, 1, '2023-11-01 04:23:18', '2023-11-01 04:23:18'),
-(12, 'Office Meeting', 'XqXzL742359.jpg', NULL, 1, '2023-11-01 04:23:31', '2023-11-01 04:23:31');
+(10, 'Office Meeting', 'j2ImC562264.jpg', NULL, 1, '2023-11-01 04:22:51', '2023-11-01 04:22:51');
 
 -- --------------------------------------------------------
 
@@ -538,6 +533,14 @@ CREATE TABLE `services` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `icon`, `image`, `sort_desp`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'INDUSTRIAL CIVIL ENGINEERING', NULL, 'hehY7130834.jpg', 'Industrial civil engineering requires unique solutions that may have to address vibration, chemical resistance, corrosion, handling of solid and liquid effluent, as well as other functional requirements. Projects often take place in high-risk environments requiring stringent safety, operational and quality control measures. Our knowledgeable project teams understand the requirements of the various plant and process infrastructure in the industrial and mining sectors, which allows them to implement those control measures to ensure that risks are assessed, managed and contained. Our industrial civil engineering services include: all kinds of civil engineering & design consulting, workshops and warehouses, electrical and control buildings, and administration buildings.', NULL, 1, '2024-01-25 03:16:13', '2024-01-25 03:16:13'),
+(2, 'COMMERCIAL BUILDING', NULL, '1NRsc35337.jpg', 'We offer a range of specialist structural engineering, architectural design and consultancy services for commercial buildings ranging from office spaces to mixed-used warehouse buildings, as well as educational buildings and business park developments. As leading engineering consultants, we work alongside architects, structural engineers, and builders to design and develop new building structures or repair structural damage to existing commercial sites. Our services range from initial discussions and consultancy to determine the feasibility of a project, through to the final design.', NULL, 1, '2024-01-25 03:17:03', '2024-01-25 03:17:03');
+
 -- --------------------------------------------------------
 
 --
@@ -574,7 +577,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `email`, `about`, `number`, `logo`, `footer_logo`, `favicon`, `address`, `footer`, `title`, `meta_title`, `meta_tag`, `meta_description`, `facebook`, `twitter`, `linkedin`, `instagram`, `youtube`, `pinterest`, `created_at`, `updated_at`) VALUES
-(1, 'Modern Food', 'modernbdf@gmail.com', 'We are a leading food and beverage company dedicated to providing high-quality products and exceptional culinary experiences for customers worldwide.', '0969610240', 'nNH5c23350.png', 'TBs0y93025.png', 'XJqhD906983.png', 'Abdul  Lotif Member Market Borowa Khilkhet Dhaka-1229', '© 2023 Copyright Modern Food |', 'Modern Food BD', 'Food and beverage company in Bangladesh', NULL, NULL, 'https://www.facebook.com/modernfoodproducts/mentions', NULL, NULL, NULL, NULL, NULL, NULL, '2023-11-05 04:43:09');
+(1, 'Build Mark Consultants', 'buildmark.bd@yahoo.com', 'BUILDMARK CONSULTANTS LIMITED is a civil and infrastructure consultancy firm with consulting engineers providing a full range of integrated engineering and related services. Earlier, the firm was known as Buildmark Engineering Limited.', '+01819496499', 'k1swt977026.png', '1o53T556813.png', 'vzHB7556731.png', 'Lev. 01, H 12, R 03, Bosoti Housing, Mirpur-02, Dhaka-1216, Bangladesh', '© 2023 Copyright Build Mark Consultants |', 'Build Mark Consultants', 'Build Mark Consultants company in Bangladesh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-01-27 10:41:09');
 
 -- --------------------------------------------------------
 
@@ -891,7 +894,7 @@ ALTER TABLE `achieves`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -993,7 +996,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `settings`

@@ -17,14 +17,14 @@
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('banner.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-solid fa-panorama"></i></span> <span class="sidebar-txt">Banner</span></a>
                     </li>
+                    <li class="sidebar-dropdown-item">
+                        <a href="{{ route('team.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-tag"></i></span> <span class="sidebar-txt">Team</span></a>
+                    </li>
                     {{-- <li class="sidebar-dropdown-item">
                         <a href="{{ route('about.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-solid fa-eject"></i></span> <span class="sidebar-txt">About</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('products.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-solid fa-cart-plus"></i></span> <span class="sidebar-txt">Product</span></a>
-                    </li>
-                    <li class="sidebar-dropdown-item">
-                        <a href="{{ route('team.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-tag"></i></span> <span class="sidebar-txt">Team</span></a>
                     </li>
                     <li class="sidebar-dropdown-item">
                         <a href="{{ route('customerSay.index') }}" class="sidebar-link"><span class="nav-icon"><i class="fa-light fa-cart-shopping-fast"></i></span> <span class="sidebar-txt">Customer Say</span></a>

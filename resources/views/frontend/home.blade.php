@@ -106,22 +106,20 @@
                     <ul>
                         <li>
                             <a href="{{ url('/') }}" class="act-link">Home</a>
-
                         </li>
                         <li>
                             <a href="{{ route('about_us') }}">About</a>
                         </li>
                         <li>
-                            <a href="{{ route('cpm.view') }}">CPM</a>
+                            <a href="{{ route('cpm.view') }}">TEAM</a>
                         </li>
+                        <li><a href="{{ route('services') }}" class="ajax">Specialized Services</a></li>
                         <li>
-                            <a href="{{ route('projects') }}">Project</a>
-
+                            <a href="{{ route('projects') }}">Portfolio</a>
                         </li>
 
-                        <li><a href="{{ route('services') }}" class="ajax">Services</a></li>
-                        <li><a href="{{ route('concern') }}" class="ajax">Concern</a></li>
-                        <li><a href="{{ route('contect') }}" class="ajax">Contacts</a></li>
+                        <li><a href="{{ route('project.list') }}" class="ajax">Project List</a></li>
+                        <li><a href="{{ route('contect') }}" class="ajax">Contact</a></li>
                     </ul>
                 </nav>
                 <!-- nav end-->
@@ -167,19 +165,56 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper" >
                             <!-- swiper-slide-->
-                            @foreach ($banners as $banner)
-                                <div class="swiper-slide">
-                                    <div class="half-hero-wrap">
-                                        <div class="pr-bg"></div>
-                                        <div class="rotate_text"></div>
-                                        <h1><span>{{ $banner->title }} </span></h1>
-                                        <h4>{{ $banner->description }}</h4>
-                                        <div class="clearfix"></div>
-                                    </div>
+                            <div class="swiper-slide">
+                                <div class="half-hero-wrap">
+                                    <div class="pr-bg"></div>
+                                    <div class="rotate_text"></div>
+                                    <h1>PERSONAL <br> AND ELEGANT <br>  <span>RESIDENCE </span></h1>
+                                    <h4></h4>
+                                    <div class="clearfix"></div>
                                 </div>
-                            @endforeach
+                            </div>
                             <!-- swiper-slide end-->
-
+                            <!-- swiper-slide-->
+                            <div class="swiper-slide">
+                                <div class="half-hero-wrap">
+                                    <div class="rotate_text"></div>
+                                    <h1>DESIGN OF <br> CLASSY AND <br><span>STYLISH BUILDING</span> </h1>
+                                    <h4></h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <!-- swiper-slide end-->
+                            <!-- swiper-slide-->
+                            <div class="swiper-slide">
+                                <div class="half-hero-wrap">
+                                    <div class="rotate_text"></div>
+                                    <h1>DESIGN OF TRISHAL <br>ECONOMIC ZONE <br> <span>  DORMITORY BUILDING</span> </h1>
+                                    <h4></h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <!-- swiper-slide end-->
+                            <!-- swiper-slide-->
+                            <div class="swiper-slide">
+                                <div class="half-hero-wrap">
+                                    <div class="rotate_text"></div>
+                                     <h1>DESIGN AND <br> RENOVATION OF <br>  <span>FLAT IN DHAKA </span></h1>
+                                    <h4></h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <!-- swiper-slide end-->
+                            <!-- swiper-slide-->
+                            <div class="swiper-slide">
+                                <div class="half-hero-wrap">
+                                    <div class="rotate_text"></div>
+                                    <h1>LUXURY DUPLEX <br>DESIGN AND <br> <span>  BUILD</span> </h1>
+                                    <h4></h4>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <!-- swiper-slide end-->
                         </div>
                     </div>
                 </div>

@@ -20,13 +20,13 @@
                         <div class="col-12">
                             <label class="form-label">Name</label>
                             <input type="text" name="name" class="form-control form-control-sm" value="{{ $teams->name }}">
-                            
+
                         </div>
                         <div class="col-12">
                             <label class="form-label">Position</label>
                             <input type="text" name="post" class="form-control form-control-sm" value="{{ $teams->post }}">
                         </div>
-                        
+
                         <div class="col-12">
                             <div class="upload-category-thumbnail">
                                 <label class="form-label" id="addCatThumb">Image</label>
@@ -37,20 +37,12 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Facebook</label>
-                            <input type="text" name="facebook" class="form-control form-control-sm" value="{{ $teams->facebook }}">
+                            <label class="form-label">Education</label>
+                            <input type="text" name="education" class="form-control form-control-sm" value="{{ $teams->education }}">
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Instagram</label>
-                            <input type="text" name="instagram" class="form-control form-control-sm" value="{{ $teams->instagram }}">
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label">Linkedin</label>
-                            <input type="text" name="linkedin" class="form-control form-control-sm" value="{{ $teams->linkedin }}">
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label">GitHub</label>
-                            <input type="text" name="github" class="form-control form-control-sm" value="{{ $teams->github }}">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" id="" class="form-control form-control-sm" cols="30" rows="5">{{ $teams->description }}</textarea>
                         </div>
                         <div class="col-12">
                             <label class="form-label">Status</label>
@@ -69,6 +61,6 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection

@@ -46,48 +46,64 @@
                 <div class="container">
                     <div class="split-sceen-content_title fl-wrap">
                         <div class="pr-bg pr-bg-white"></div>
-                        <h3> Our company story</h3>
+                        <h3> About Us</h3>
                         <p></p>
                     </div>
                     <div class="column-wrap-content fl-wrap">
-                        <div class="column-wrap-media fl-wrap">
+                        {{-- <div class="column-wrap-media fl-wrap">
                             <div class="pr-bg pr-bg-white"></div>
                             <img src="{{ asset('frontend') }}/images/all/1.jpg"  class="respimg" alt="">
 
-                        </div>
+                        </div> --}}
                         <div class="column-wrap-text">
                             <div class="row">
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <h3 class="pr-subtitle">
                                         About Us
                                         <div class="pr-bg pr-bg-white"></div>
                                     </h3>
-                                </div>
-                                <div class="col-md-8">
+                                </div> --}}
+                                <div class="col-md-12">
                                     <div class="pr-bg pr-bg-white"></div>
-                                    <p>V3 Partners is a meticulously managed construction company. Incorporated in the year 2009, the company has completed several projects in the Mumbai Metropolitan Region (MMR).</p>
-                                    <p>The company has attained heights on a strong foundation of high business ethics. The company believes participating in all round functions of the business i.e. project feasibility, optimised planning, marquee architecture, latest construction technique, smooth management, timely delivery and most importantly, customer satisfaction.</p>
-                                    <P>The company focuses only on redevelopment of societies in the Mumbai Metropolitan Region (MMR) and is expanding its growth on large scale development outside Mumbai to tap future cities with affordable housing.</P>
-                                    <P>What started as a humble beginning has now grown within years as strength and stature. During this journey, the company has not only built building structures but gained customer relationship with trust. An atmospheres where ethics and principles still exists and thrive.</P>
-                                    <P>The company believes in respecting its work regardless its magnitude. The principle behind this thought is work should be completed with hard work, precision and trust worthiness.</P>
-                                    <P>V3 Partners believes it is in the business where on one hand there are people who impart with their home which they bought through their lifetime savings and on the other hand there are home buyers who accumulate every penny to buy a new home. This trust and dream of getting a new and better home drives and motivates us to give back to society what they have always aspired for.</P>
-                                    <P>With this thought process; V3 Partners have started a new consultancy firm We3 Redevelopment Consultant’s Private Limited (We3 RCPL). We3 RCPL focuses on self-redevelopment of societies on Development Management (DM) model. At We3 RCPL we offer a whole bouquet of scope of work under one umbrella. Our one of a kind model of self-redevelopment helps society to take on the mammoth task of redevelopment with ease and peace.</P>
+                                    <h3 class="pb-5" style="text-align: left; font-size: 18px;">TO TRANSFORM ENVIRONMENTS, COMMUNITIES, AND ECONOMIES, BUILDMARK COMBINES STRATEGIC THINKING WITH BOLD AND INSPIRATIONAL DESIGN.</h3>
+                                    <p>We believe that the power of design has the potential to transform
+                                        economies, societies, and the environment. Through specialized designs
+                                        that surpass our clients' business objectives and motivate those who
+                                        occupy them for living, working, and healing, we help our clients realize
+                                        their dreams. Regardless of the sort of development, scale, scope, or
+                                        location involved, we always keep the people we are designing for in mind
+                                        and approach every problem as a chance for learning.
+                                        Our audacious design concepts are inspired by the assurance that comes
+                                        from developed knowledge, attentive listening, strong business ownership,
+                                        and a collaborative combination of viewpoints.
+                                        We are here to do more than design your physical space. We know the ins
+                                        and outs of the architectural landscape, enabling us to find cost-reducing
+                                        efficiencies while maintaining a passion for new approaches.
+                                        We specialize in engineering, architecture, environmental and construction
+                                        services. Our team of Engineers offers expertise in a wide range of
+                                        technical fields, including civil, structural, environmental, hydraulic,
+                                        plumbing, mechanical, project management, and more.</P>
 
 
+                                </div>
+                                <div class="col-lg-12">
+                                    <h3 class="pb-5" style="text-align: left; font-size: 18px; padding-top: 20px">MISSION & VISION</h3>
+                                    <p><strong>* </strong> To establish collaborations that produce creative, economical, high-quality construction that surpasses our clients' expectations in a safe environment.</p>
+                                    <p><strong>* </strong> Be a respected, leading regional infrastructure engineering consultant and builder.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="section-number right_sn">
-                        <div class="pr-bg pr-bg-white"></div>
-                        <span>0</span>1.
-                    </div>
+                    <!--<div class="section-number right_sn">-->
+                    <!--    <div class="pr-bg pr-bg-white"></div>-->
+                    <!--    <span>0</span>1.-->
+                    <!--</div>-->
                 </div>
             </section>
             <!--section end-->
             <div class="section-separator"></div>
             <!--section -->
-            <section   class="no-padding">
+            {{-- <section   class="no-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -145,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
 
 
         </div>

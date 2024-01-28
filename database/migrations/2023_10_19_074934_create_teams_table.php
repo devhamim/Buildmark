@@ -16,10 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('post');
             $table->string('image')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('instagram')->nullable();
-            $table->string('linkedin')->nullable();
-            $table->string('github')->nullable();
+            $table->string('education')->nullable();
+            $table->longText('description')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
         });
