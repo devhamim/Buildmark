@@ -32,7 +32,6 @@
                         </ul>
                     </div>
                     <!-- footer contacts end -->
-                    <a href="contacts.html" class="ajax fc_button">Get In Touch <i class="fal fa-envelope"></i></a>
                 </div>
             </div>
         </div>
