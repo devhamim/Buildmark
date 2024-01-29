@@ -165,6 +165,19 @@
                     <div class="swiper-container" style="background: #3a3a3a44">
                         <div class="swiper-wrapper" >
                             <!-- swiper-slide-->
+                            @foreach ($banners as $banner)
+                                <div class="swiper-slide">
+                                    <div class="half-hero-wrap">
+                                        <div class="pr-bg"></div>
+                                        <div class="rotate_text"></div>
+                                        <h1 style="width: 50%"><span>{{ $banner->title }} </span></h1>
+                                        <h4></h4>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <!-- swiper-slide end-->
+                            {{-- <!-- swiper-slide-->
                             <div class="swiper-slide">
                                 <div class="half-hero-wrap">
                                     <div class="pr-bg"></div>
@@ -214,7 +227,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
-                            <!-- swiper-slide end-->
+                            <!-- swiper-slide end--> --}}
                         </div>
                     </div>
                 </div>
