@@ -56,7 +56,7 @@
                                 <img src="{{ asset('uploads/service') }}/{{ $service->image }}"  class="respimg" alt="">
 
                             </div>
-                            <div class="serv-text fl-wrap">
+                            <div class=" fl-wrap">
                                 <div class="pr-bg pr-bg-white"></div>
                                 <div class="row">
                                     <div class="col-md-12">

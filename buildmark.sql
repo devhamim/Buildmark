@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 28, 2024 at 12:16 PM
--- Server version: 10.6.16-MariaDB-cll-lve
--- PHP Version: 8.1.26
+-- Host: 127.0.0.1
+-- Generation Time: Jan 28, 2024 at 01:48 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nugorxyz_buildmark`
+-- Database: `buildmark`
 --
 
 -- --------------------------------------------------------
@@ -288,6 +288,7 @@ CREATE TABLE `galleries` (
   `title` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -297,11 +298,8 @@ CREATE TABLE `galleries` (
 -- Dumping data for table `galleries`
 --
 
-INSERT INTO `galleries` (`id`, `title`, `image`, `address`, `status`, `created_at`, `updated_at`) VALUES
-(7, 'Office Meeting', 'hWypo862004.jpg', NULL, 1, '2023-11-01 04:22:30', '2023-11-01 04:22:30'),
-(8, 'Office Meeting', 'BAOTB336220.jpg', NULL, 1, '2023-11-01 04:22:38', '2023-11-01 04:22:38'),
-(9, 'Office Meeting', 'CYwx972349.jpg', NULL, 1, '2023-11-01 04:22:44', '2023-11-01 04:22:44'),
-(10, 'Office Meeting', 'j2ImC562264.jpg', NULL, 1, '2023-11-01 04:22:51', '2023-11-01 04:22:51');
+INSERT INTO `galleries` (`id`, `title`, `image`, `address`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(17, 'ANANYA', 'nP3E4479436.jpg', 'JASHORE', 'Project Type: Residential duplex building, Address: Shankorpur, Ishaq sarak, Jashore, Total Development area: 3260 sft (Approximate), Total storied: Duplex building.', 1, '2024-01-28 05:21:00', '2024-01-28 05:21:00');
 
 -- --------------------------------------------------------
 
@@ -371,7 +369,32 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (24, '2023_10_30_073843_create_media_table', 3),
 (25, '2023_10_31_053006_create_videos_table', 4),
 (26, '2023_10_31_101022_create_dealerforms_table', 5),
-(27, '2023_10_31_101055_create_visitingareas_table', 5);
+(27, '2023_10_31_101055_create_visitingareas_table', 5),
+(28, '2024_01_28_095455_create_multigalleries_table', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `multigalleries`
+--
+
+CREATE TABLE `multigalleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `protfolio_id` int(11) DEFAULT NULL,
+  `gallery` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `multigalleries`
+--
+
+INSERT INTO `multigalleries` (`id`, `protfolio_id`, `gallery`, `created_at`, `updated_at`) VALUES
+(1, 16, 'nvkDC491503.jpg', NULL, NULL),
+(2, 16, 'nXuQy565947.jpeg', NULL, NULL),
+(3, 17, 'HN9oG957963.jpg', NULL, NULL),
+(4, 17, 'hzUtT64883.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -590,10 +613,8 @@ CREATE TABLE `teams` (
   `name` varchar(255) NOT NULL,
   `post` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `facebook` varchar(255) DEFAULT NULL,
-  `instagram` varchar(255) DEFAULT NULL,
-  `linkedin` varchar(255) DEFAULT NULL,
-  `github` varchar(255) DEFAULT NULL,
+  `education` varchar(255) DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -603,10 +624,10 @@ CREATE TABLE `teams` (
 -- Dumping data for table `teams`
 --
 
-INSERT INTO `teams` (`id`, `name`, `post`, `image`, `facebook`, `instagram`, `linkedin`, `github`, `status`, `created_at`, `updated_at`) VALUES
-(6, 'MD MOSHAREF HOSSAIN', 'Managing Director', 'zhQoV930085.jpg', NULL, NULL, NULL, NULL, 1, '2023-11-05 04:41:17', '2023-11-05 04:41:17'),
-(8, 'Kazi Tawfiqul Islam', 'Seals Executive & Production', 'qX3z6667139.jpg', NULL, NULL, NULL, NULL, 1, '2023-11-08 10:02:36', '2023-11-08 10:02:36'),
-(9, 'MD ALAMGIR HOSSAIN', 'RSM', 'PPdCr278946.jpg', NULL, NULL, NULL, NULL, 1, '2023-11-17 01:43:28', '2023-11-17 01:43:28');
+INSERT INTO `teams` (`id`, `name`, `post`, `image`, `education`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(10, 'BRIG GEN SYED MD RAFIQUL ISLAM (RETD)', 'CHAIRMAN', 'JNkEM46086.jpeg', NULL, 'Brigadier General Syed Md Rafiqul Islam (Retd) is an exmilitary expert and has long experience in managing several\r\nstate-owned enterprises. Apart from his military expertise,\r\nhe is well experienced in monitoring, supervising and\r\nimplementing many construction Projects of the Army and\r\nthe Government, as he held various important\r\nappointments like; PD, MD, Principal, DG, Station\r\nCommander etc. Among the army projects; a number of\r\nmulti-storied SM Barracks, Officers\' Mess, Officers\' club,\r\nSainik Club, Cantonment market, Gun shed, Ammunition\r\nDump, MT Garage, Swimming pool, Multipurpose shade,\r\nCSD exclusive shop, Cantonment Public School building,\r\nSena Flour Mill etc. are mentionable. As the Managing\r\nDirector of Bangladesh Diesel Plant Ltd, he directly\r\nsupervised many Government DPM projects like;\r\nConstruction of Sheikh Kamal IT Training and Incubation\r\nCentre in 11 districts, Embankment, Land development,\r\nConstructions and Earth protection works of 1320 MW\r\nCoal Fired Thermal Power Plants at Patuakhali under APCL\r\nand RPCL, Management of Quick Rental Power Plant at\r\nNarayanganj etc.', 1, '2024-01-28 05:39:39', '2024-01-28 05:50:04'),
+(11, 'NAZMUL HASSAN', 'MANAGING DIRECTOR', NULL, 'M. ENGG. (STRUCTURE), FIEB ENLISTED RAJUK & CANTT BOARD, DHAKA', 'His professional expertise spans 15+ years, and\r\nhe has worked on high-rise residential and\r\ncommercial projects, industrial projects, cyclone\r\ncenters, monuments, steel structures, and storm\r\nwater treatment plants (STP). In 2007, he\r\ngraduated from AUST with a bachelor of science\r\nin civil engineering. AUST awarded him a\r\nmaster\'s degree in structural engineering as well\r\n(2022). He is a Fellow of the Institute of\r\nEngineers Bangladesh in addition to being an\r\nenlisted engineer with RAJUK and the\r\ncantonment board.', 1, '2024-01-28 05:40:20', '2024-01-28 05:49:49'),
+(12, 'SHAKHILA HASSAN', 'DIRECTOR', 'csLwd199460.jpeg', 'MBA, BBA', 'She is one of the founders of the company. In 2015, he\r\ngraduated from MMC with a bachelor of business\r\nadministration. MMC awarded her a master\'s degree of\r\nbusiness administration in management as well (2018).', 1, '2024-01-28 05:41:07', '2024-01-28 05:49:34');
 
 -- --------------------------------------------------------
 
@@ -794,6 +815,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `multigalleries`
+--
+ALTER TABLE `multigalleries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -948,7 +975,7 @@ ALTER TABLE `features`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `media`
@@ -960,7 +987,13 @@ ALTER TABLE `media`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `multigalleries`
+--
+ALTER TABLE `multigalleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -1008,7 +1041,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`

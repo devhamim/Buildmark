@@ -38,7 +38,7 @@
 					<div class="features-item text-center mb-30">
 						<div class="features-thumb">
 							<img src="{{ asset('uploads/team') }}/{{ $team->image }}" alt="">
-							
+
 						</div>
 						<div class="features-content">
 							<h4><a >{{ $team->name }}</a></h4>

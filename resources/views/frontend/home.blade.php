@@ -162,14 +162,14 @@
             <!-- hero-slider-wrap -->
             <div class="hero-slider-wrap fl-wrap full-height">
                 <div class="hero-slider fs-gallery-wrap fl-wrap full-height">
-                    <div class="swiper-container">
+                    <div class="swiper-container" style="background: #3a3a3a44">
                         <div class="swiper-wrapper" >
                             <!-- swiper-slide-->
                             <div class="swiper-slide">
                                 <div class="half-hero-wrap">
                                     <div class="pr-bg"></div>
                                     <div class="rotate_text"></div>
-                                    <h1>PERSONAL <br> AND ELEGANT <br>  <span>RESIDENCE </span></h1>
+                                    <h1 style="color: #33c6e8">PERSONAL <br> AND ELEGANT <br>  <span>RESIDENCE </span></h1>
                                     <h4></h4>
                                     <div class="clearfix"></div>
                                 </div>
@@ -179,7 +179,7 @@
                             <div class="swiper-slide">
                                 <div class="half-hero-wrap">
                                     <div class="rotate_text"></div>
-                                    <h1>DESIGN OF <br> CLASSY AND <br><span>STYLISH BUILDING</span> </h1>
+                                    <h1 style="color: #33c6e8">DESIGN OF <br> CLASSY AND <br><span>STYLISH BUILDING</span> </h1>
                                     <h4></h4>
                                     <div class="clearfix"></div>
                                 </div>
@@ -189,7 +189,7 @@
                             <div class="swiper-slide">
                                 <div class="half-hero-wrap">
                                     <div class="rotate_text"></div>
-                                    <h1>DESIGN OF TRISHAL <br>ECONOMIC ZONE <br> <span>  DORMITORY BUILDING</span> </h1>
+                                    <h1 style="color: #33c6e8">DESIGN OF TRISHAL <br>ECONOMIC ZONE <br> <span>  DORMITORY BUILDING</span> </h1>
                                     <h4></h4>
                                     <div class="clearfix"></div>
                                 </div>
@@ -199,7 +199,7 @@
                             <div class="swiper-slide">
                                 <div class="half-hero-wrap">
                                     <div class="rotate_text"></div>
-                                     <h1>DESIGN AND <br> RENOVATION OF <br>  <span>FLAT IN DHAKA </span></h1>
+                                     <h1 style="color: #33c6e8">DESIGN AND <br> RENOVATION OF <br>  <span>FLAT IN DHAKA </span></h1>
                                     <h4></h4>
                                     <div class="clearfix"></div>
                                 </div>
@@ -209,7 +209,7 @@
                             <div class="swiper-slide">
                                 <div class="half-hero-wrap">
                                     <div class="rotate_text"></div>
-                                    <h1>LUXURY DUPLEX <br>DESIGN AND <br> <span>  BUILD</span> </h1>
+                                    <h1 style="color: #33c6e8">LUXURY DUPLEX <br>DESIGN AND <br> <span>  BUILD</span> </h1>
                                     <h4></h4>
                                     <div class="clearfix"></div>
                                 </div>

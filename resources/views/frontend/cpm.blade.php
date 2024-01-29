@@ -53,7 +53,7 @@
                         <div class="column-wrap-text">
                             <div class="row">
                                 @foreach ($teams as $team)
-                                <div class="col-md-6" style="text-align: left">
+                                <div class="col-md-12 mb-5" style="text-align: left; padding-bottom: 40px;">
                                     <div class="pr-bg pr-bg-white"></div>
                                     <div class="row">
                                         <div class="col-lg-8">
@@ -62,7 +62,9 @@
                                             <p><strong>{{ $team->post }}</strong></p>
                                         </div>
                                         <div class="col-lg-4">
-                                            <img width="100%"  style="border-radius: 50%" src="{{ asset('uploads/team') }}/{{ $team->image }}" alt="">
+                                            @if ($team->image != null)
+                                                <img width="120px" height="120px" style="border-radius: 50%" src="{{ asset('uploads/team') }}/{{ $team->image }}" alt="">
+                                            @endif
                                         </div>
                                     </div>
                                     <p>{{ $team->description }}</p>

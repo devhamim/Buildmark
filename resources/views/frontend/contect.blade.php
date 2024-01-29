@@ -43,6 +43,27 @@
                 <div class="pr-bg pr-bg-white"></div>
             </div>
             <!--section-->
+            <section id="sec2" class="small-padding" style="text-align: left;">
+                <div class="container">
+                    <div class="split-sceen-content_title fl-wrap">
+                        <div class="pr-bg pr-bg-white"></div>
+                        <h3>why choose us</h3>
+                    </div>
+                    <div id="contact-form">
+                        <ul style=" list-style: disc;">
+                            <li>We are budget-conscious creatives that enjoy working under constraints.</li>
+                            <li>We used cost-effective methods, knowledge, skill, and experience to build.</li>
+                            <li>We always aim to meet and exceed our clients' expectations.</li>
+                            <li>We complete every project on schedule time period.</li>
+                            <li>Our ability to collaborate as a team and find innovative approaches to difficult engineering problems</li>
+                            <li>Our goal is to build long-term connections with each and every clients by capitalizing on our strong points—having excellent people skills, extensive knowledge of the heavy construction management, and providing high-caliber multidisciplinary engineering and design—to successfully complete project in a timely, safe, and economical manner.</li>
+                        </ul>
+                    </div>
+                    <!-- contact form  end-->
+                </div>
+            </section>
+            <!--section end-->
+            <!--section-->
             <section id="sec1" class="small-padding">
                 <div class="container">
                     <div class="split-sceen-content_title fl-wrap">
@@ -58,7 +79,7 @@
                                 <div class="pr-bg pr-bg-white"></div>
                                 <ul>
                                     @if ($settings->first()->email != null)
-                                        <li><strong>01.</strong><span>Write : </span> <a href="mailto:{{ $settings->first()->email }}">{{ $settings->first()->email }}</a></li>
+                                        <li><strong>01.</strong><span>Email : </span> <a href="mailto:{{ $settings->first()->email }}">{{ $settings->first()->email }}</a></li>
                                     @endif
                                     @if ($settings->first()->number != null)
                                         <li><strong>02.</strong><span> Call :</span> <a href="tel:{{ $settings->first()->number }}">{{ $settings->first()->number }}</a></li>
@@ -74,23 +95,7 @@
             </section>
             <!--section end-->
             <div class="section-separator"></div>
-            <!--section-->
-            <section id="sec2" class="small-padding">
-                <div class="container">
-                    <div class="split-sceen-content_title fl-wrap">
-                        <div class="pr-bg pr-bg-white"></div>
-                        <h3>why choose us</h3>
-                        <p></p>
-                    </div>
-                    <div id="contact-form">
-                        <div class="pr-bg pr-bg-white"></div>
-                        <div id="message"></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, vel. Quidem, consequuntur ea harum laudantium ex perspiciatis adipisci. Voluptatum praesentium libero, explicabo eum vitae cupiditate ad temporibus quo quidem sint.</p>
-                    </div>
-                    <!-- contact form  end-->
-                </div>
-            </section>
-            <!--section end-->
+
         </div>
         <!--column-wrap-container end-->
     </div>

@@ -46,10 +46,10 @@
                     <div class="container">
                         <div class="split-sceen-content_title fl-wrap">
                             <div class="pr-bg pr-bg-white"></div>
-                            <h3>PROJECT AT A GLANCE - 1</h3>
+                            <h3>PROJECT AT A GLANCE</h3>
                         </div>
                         <div class="column-wrap-content fl-wrap">
-                            <div class="serv-text fl-wrap">
+                            <div class=" fl-wrap">
                                 <div class="pr-bg pr-bg-white"></div>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -84,29 +84,6 @@
                                                 at Plot 128, Block-B, Road 07, Mirpur housing, Mirpur, Dhaka.</li>
                                             <li>Design-Build Construction of the building Ananya, at Shankorpur, Ishaq
                                                 Sarak, Jashore Town</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--section end-->
-                <div class="section-separator"></div>
-                <!--section-->
-                <section class="small-padding">
-                    <div class="container">
-                        <div class="split-sceen-content_title fl-wrap">
-                            <div class="pr-bg pr-bg-white"></div>
-                            <h3>PROJECT AT A GLANCE - 2</h3>
-                        </div>
-                        <div class="column-wrap-content fl-wrap">
-                            <div class="serv-text fl-wrap">
-                                <div class="pr-bg pr-bg-white"></div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul style="text-align: left; list-style: disc">
                                             <li>Detail structural consultancy of the 10 storied commercial cum residential building with semi basement "khan height" as Rupatoli Housing, C & B Road, Rupatoil, Ward 24, Barishal city corporation Barishal.</li>
                                             <li>Detail structural consultancy of the eight (08) storied residential building “Greenwood Tohfa” at Plot 846, Road 12 (new), Avenue 04, Mirpur DOHS, Dhaka</li>
                                             <li>Detail structural consultancy of the 15 storied with 2 basement building “Columbia Tower” at house-90, Dhaka Housing Corporation, Adabor, Dhaka.</li>
@@ -119,16 +96,15 @@
                                             <li>Detail structural consultancy of G+8 storied residential building for Major General Md Emdad Ul Bari at Plot no 297, Road no 13, Savar DOHS.</li>
                                             <li>Abul Hossain Chairman Bari Jame Masjid, Champanagar, Naarayangaj</li>
                                             <li>Detail consultancy of the nine (09) storied residential building for Major Gen Syed MD Rafiqul Islam (RETD) at Plot no.-019, Road no.-304, Sector-11, Jolshiri Abashon, Dhaka......and many more. </li>
-
                                         </ul>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!--section end-->
-
                 <div class="section-separator"></div>
                 <div class="clearfix"></div>
             </div>
