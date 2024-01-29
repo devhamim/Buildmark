@@ -162,7 +162,7 @@
             <!-- hero-slider-wrap -->
             <div class="hero-slider-wrap fl-wrap full-height">
                 <div class="hero-slider fs-gallery-wrap fl-wrap full-height">
-                    <div class="swiper-container" style="background: #3a3a3a44">
+                    <div class="swiper-container" style="background: #0000001e">
                         <div class="swiper-wrapper" >
                             <!-- swiper-slide-->
                             @foreach ($banners as $banner)
@@ -247,7 +247,7 @@
                         @foreach ($banners as $banner)
                             <div class="swiper-slide">
                                 <div class="bg"  data-bg="{{ asset('uploads/banner') }}/{{ $banner->image }}"></div>
-                                <div class="overlay"></div>
+                                {{-- <div class="overlay"></div> --}}
                             </div>
                         @endforeach
                         <!-- swiper-slide end-->

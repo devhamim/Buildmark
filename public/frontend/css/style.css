@@ -4245,7 +4245,7 @@ font-family: 'Roboto', sans-serif;
 	width: 20%;
 	height: 100%;
 	box-sizing: border-box;
-	border-right: 1px solid rgba(255, 255,255, 0.1);
+	/* border-right: 1px solid rgba(255, 255,255, 0.1); */
 	height: 100%;
 	position: relative;
 }

@@ -56,16 +56,19 @@
                                 <div class="col-md-12 mb-5" style="text-align: left; padding-bottom: 40px;">
                                     <div class="pr-bg pr-bg-white"></div>
                                     <div class="row">
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-2">
+                                            @if ($team->image != null)
+                                                <img width="120px" height="120px" style="border-radius: 50%" src="{{ asset('uploads/team') }}/{{ $team->image }}" alt="">
+                                            @else
+                                                <img width="120px" height="120px" style="border-radius: 50%" src="{{ asset('frontend/images/team/1.png') }}" alt="">
+                                            @endif
+                                        </div>
+                                        <div class="col-lg-10">
                                             <h3 style="font-size: 22px"><strong>{{ $team->name }}</strong></h3>
                                             <p><strong>{{ $team->education }}</strong></p>
                                             <p><strong>{{ $team->post }}</strong></p>
                                         </div>
-                                        <div class="col-lg-4">
-                                            @if ($team->image != null)
-                                                <img width="120px" height="120px" style="border-radius: 50%" src="{{ asset('uploads/team') }}/{{ $team->image }}" alt="">
-                                            @endif
-                                        </div>
+
                                     </div>
                                     <p>{{ $team->description }}</p>
                                 </div>
