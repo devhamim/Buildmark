@@ -42,38 +42,6 @@
             <div class="col-wc_dec col-wc_dec2">
                 <div class="pr-bg pr-bg-white"></div>
             </div>
-
-            <!--section-->
-            <!--<section id="sec1" class="small-padding">-->
-            <!--    <div class="container">-->
-            <!--        <div class="split-sceen-content_title fl-wrap">-->
-            <!--            <div class="pr-bg pr-bg-white"></div>-->
-            <!--            <h3> Contact Details</h3>-->
-            <!--            <p> </p>-->
-            <!--        </div>-->
-            <!--        <div class="column-wrap-content fl-wrap">-->
-            <!--            <div class="column-wrap-media fl-wrap">-->
-            <!--                <div class="pr-bg pr-bg-white"></div>-->
-            <!--                <img src="{{ asset('frontend') }}/images/all/1.jpg"  class="respimg" alt="">-->
-            <!--                <div class="cont-det-wrap dark-bg">-->
-            <!--                    <div class="pr-bg pr-bg-white"></div>-->
-            <!--                    <ul>-->
-            <!--                        @if ($settings->first()->email != null)-->
-            <!--                            <li><strong>01.</strong><span>Email : </span> <a href="mailto:{{ $settings->first()->email }}">{{ $settings->first()->email }}</a></li>-->
-            <!--                        @endif-->
-            <!--                        @if ($settings->first()->number != null)-->
-            <!--                            <li><strong>02.</strong><span> Call :</span> <a href="tel:{{ $settings->first()->number }}">{{ $settings->first()->number }}</a></li>-->
-            <!--                        @endif-->
-            <!--                        @if ($settings->first()->address != null)-->
-            <!--                            <li><strong>03.</strong><span> Visit :</span> <a>{{ $settings->first()->address }}</a></li>-->
-            <!--                        @endif-->
-            <!--                    </ul>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--        </div>-->
-            <!--    </div>-->
-            <!--</section>-->
-            <!--section end-->
             <section   class="small-padding">
                     <div class="container">
                         <div class="split-sceen-content_title fl-wrap">
@@ -114,4 +82,6 @@
     <div class="limit-box fl-wrap"></div>
 </div>
 <!--content end -->
+<!-- footer -->
+<div class="height-emulator fl-wrap"></div>
 @endsection

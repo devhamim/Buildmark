@@ -11,7 +11,7 @@
                 <h5>Edit Gallery</h5>
             </div>
             <div class="panel-body">
-                <form action="{{ route('gallery.update', $gallerys->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('allgallery.update', $gallerys->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <input type="hidden" name="id" value="{{ $gallerys->id }}">

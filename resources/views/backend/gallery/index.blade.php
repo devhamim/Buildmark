@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="dashboard-breadcrumb mb-30">
-    <h2>Project</h2>
+    <h2>Gallery</h2>
 </div>
 <div class="row g-4">
     <div class="col-xxl-4 col-md-5">
         <div class="panel">
             <div class="panel-header">
-                <h5>Add New Project</h5>
+                <h5>Add New Gallery</h5>
             </div>
             <div class="panel-body">
                 <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
@@ -49,7 +49,7 @@
     <div class="col-xxl-8 col-md-7">
         <div class="panel">
             <div class="panel-header">
-                <h5>All Project</h5>
+                <h5>All Gallery</h5>
                 <div class="btn-box d-flex gap-2">
                     <div id="tableSearch"></div>
                     <div class="digi-dropdown dropdown">

@@ -101,6 +101,16 @@
         <!-- nav-holder-->
         <div class="nav-holder but-hol">
             <div class="nav-scroll-bar-wrap fl-wrap">
+                <div class="nav-search">
+                    <ul style="text-align: left">
+                        @if ($setting->first()->number != null)
+                            <li><span> Call </span> <a href="tel:{{ $setting->first()->number }}">{{ $setting->first()->number }}</a></li>
+                        @endif
+                        @if ($setting->first()->email != null)
+                            <li><span> Email </span> <a href="mailto:{{ $setting->first()->email }}">{{ $setting->first()->email }}</a></li>
+                        @endif
+                    </ul>
+                </div>
                 <!-- nav -->
                 <nav class="nav-inner" id="menu">
                     <ul>
@@ -117,7 +127,9 @@
                         <li>
                             <a href="{{ route('projects') }}">Portfolio</a>
                         </li>
-
+                        <li>
+                            <a href="{{ route('all.gallery') }}">Gallery</a>
+                        </li>
                         <li><a href="{{ route('project.list') }}" class="ajax">Project List</a></li>
                         <li><a href="{{ route('contect') }}" class="ajax">Contact</a></li>
                     </ul>
@@ -177,57 +189,6 @@
                                 </div>
                             @endforeach
                             <!-- swiper-slide end-->
-                            {{-- <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="half-hero-wrap">
-                                    <div class="pr-bg"></div>
-                                    <div class="rotate_text"></div>
-                                    <h1 style="color: #33c6e8">PERSONAL <br> AND ELEGANT <br>  <span>RESIDENCE </span></h1>
-                                    <h4></h4>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="half-hero-wrap">
-                                    <div class="rotate_text"></div>
-                                    <h1 style="color: #33c6e8">DESIGN OF <br> CLASSY AND <br><span>STYLISH BUILDING</span> </h1>
-                                    <h4></h4>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="half-hero-wrap">
-                                    <div class="rotate_text"></div>
-                                    <h1 style="color: #33c6e8">DESIGN OF TRISHAL <br>ECONOMIC ZONE <br> <span>  DORMITORY BUILDING</span> </h1>
-                                    <h4></h4>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="half-hero-wrap">
-                                    <div class="rotate_text"></div>
-                                     <h1 style="color: #33c6e8">DESIGN AND <br> RENOVATION OF <br>  <span>FLAT IN DHAKA </span></h1>
-                                    <h4></h4>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end-->
-                            <!-- swiper-slide-->
-                            <div class="swiper-slide">
-                                <div class="half-hero-wrap">
-                                    <div class="rotate_text"></div>
-                                    <h1 style="color: #33c6e8">LUXURY DUPLEX <br>DESIGN AND <br> <span>  BUILD</span> </h1>
-                                    <h4></h4>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- swiper-slide end--> --}}
                         </div>
                     </div>
                 </div>
@@ -247,7 +208,7 @@
                         @foreach ($banners as $banner)
                             <div class="swiper-slide">
                                 <div class="bg"  data-bg="{{ asset('uploads/banner') }}/{{ $banner->image }}"></div>
-                                {{-- <div class="overlay"></div> --}}
+                                <div class="overlay"></div>
                             </div>
                         @endforeach
                         <!-- swiper-slide end-->

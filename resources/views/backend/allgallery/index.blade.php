@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="dashboard-breadcrumb mb-30">
-    <h2>Project</h2>
+    <h2>All Gallery</h2>
 </div>
 <div class="row g-4">
     <div class="col-xxl-4 col-md-5">
         <div class="panel">
             <div class="panel-header">
-                <h5>Add New Project</h5>
+                <h5>Add New All Gallery</h5>
             </div>
             <div class="panel-body">
-                <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('allgallery.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="row g-3">
 
@@ -28,7 +28,7 @@
                             <input type="file" name="gallery[]" multiple class="form-control form-control-sm @error('gallery') is-invalid @enderror" value="{{ old('gallery') }}">
                         </div>
                         <div class="col-sm-6">
-                            <label class="form-label">Address</label>
+                            <label class="form-label">Date</label>
                             <input type="text" name="address" class="form-control form-control-sm @error('address') is-invalid @enderror" value="{{ old('address') }}">
                         </div>
                         <div class="col-sm-12">
@@ -49,7 +49,7 @@
     <div class="col-xxl-8 col-md-7">
         <div class="panel">
             <div class="panel-header">
-                <h5>All Project</h5>
+                <h5>All Gallery</h5>
                 <div class="btn-box d-flex gap-2">
                     <div id="tableSearch"></div>
                     <div class="digi-dropdown dropdown">
@@ -87,7 +87,7 @@
                                 <td>
                                     <div class="table-category-card">
                                         <div class="part-icon">
-                                            <span><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt=""></span>
+                                            <span><img src="{{ asset('uploads/allgallery') }}/{{ $gallery->image }}" alt=""></span>
                                         </div>
                                         <div class="part-txt" style="width: 120px">
                                             <span class="category-name">{{ $gallery->title }}</span>
@@ -105,7 +105,7 @@
                                 <td>
                                     <div class="btn-box">
                                         {{-- <a href="{{ route('gallery.edit', $gallery->id) }}"><i class="fa-light fa-pen-to-square"></i></a> --}}
-                                        <form action="{{ route('gallery.destroy',  $gallery->id) }}" method="POST">
+                                        <form action="{{ route('allgallery.destroy',  $gallery->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class=" border-0 mr-2">

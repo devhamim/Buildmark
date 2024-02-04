@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\about;
 use App\Models\achieve;
+use App\Models\allgallery;
+use App\Models\allmultigallery;
 use App\Models\banner;
 use App\Models\blog;
 use App\Models\client;
@@ -117,6 +119,22 @@ class FrontendController extends Controller
         $project_id = multigallery::where('protfolio_id', $id)->get();
         $projects = gallery::where('id', $id)->get();
         return view('frontend.gallery_details',[
+            'project_id'=>$project_id,
+            'projects'=>$projects,
+        ]);
+    }
+    //gallery
+    function all_gallery(){
+        $projects = allgallery::where('status', 1)->get();
+        return view('frontend.allgallery', [
+            'projects'=>$projects,
+        ]);
+    }
+    // projects_details
+    function gallery_details($id){
+        $project_id = allmultigallery::where('protfolio_id', $id)->get();
+        $projects = allgallery::where('id', $id)->get();
+        return view('frontend.allgallery_details',[
             'project_id'=>$project_id,
             'projects'=>$projects,
         ]);

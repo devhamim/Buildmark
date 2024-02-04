@@ -59,6 +59,8 @@ Route::get('/register/dealerform', [FrontendController::class, 'register_dealerf
 Route::get('/team/view', [FrontendController::class, 'cpm_view'])->name('cpm.view');
 Route::get('/concern', [FrontendController::class, 'concern'])->name('concern');
 Route::get('/project/list', [FrontendController::class, 'project_list'])->name('project.list');
+Route::get('/all/gallery', [FrontendController::class, 'all_gallery'])->name('all.gallery');
+Route::get('/gallery/details/{id}', [FrontendController::class, 'gallery_details'])->name('gallery.details');
 
 Route::post('/blog/comment', [BlogController::class, 'blog_comment'])->name('blog.comment');
 Route::get('/dealerform/visiting/{id}', [DealerFormController::class, 'dealerform_visiting'])->name('dealerform.visiting');

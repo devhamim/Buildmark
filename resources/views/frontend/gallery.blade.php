@@ -87,6 +87,16 @@
                     <!-- nav-holder-->
                     <div class="nav-holder but-hol">
                         <div class="nav-scroll-bar-wrap fl-wrap">
+                            <div class="nav-search">
+                                <ul style="text-align: left">
+                                    @if ($setting->first()->number != null)
+                                        <li><span> Call </span> <a href="tel:{{ $setting->first()->number }}">{{ $setting->first()->number }}</a></li>
+                                    @endif
+                                    @if ($setting->first()->email != null)
+                                        <li><span> Email </span> <a href="mailto:{{ $setting->first()->email }}">{{ $setting->first()->email }}</a></li>
+                                    @endif
+                                </ul>
+                            </div>
                             <!-- nav -->
                             <nav class="nav-inner" id="menu">
                                 <ul>
@@ -103,7 +113,9 @@
                                     <li>
                                         <a href="{{ route('projects') }}">Portfolio</a>
                                     </li>
-
+                                    <li>
+                                        <a href="{{ route('all.gallery') }}">Gallery</a>
+                                    </li>
                                     <li><a href="{{ route('project.list') }}" class="ajax">Project List</a></li>
                                     <li><a href="{{ route('contect') }}" class="ajax">Contact</a></li>
                                 </ul>

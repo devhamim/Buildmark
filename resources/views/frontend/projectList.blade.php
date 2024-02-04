@@ -114,4 +114,6 @@
         <div class="limit-box fl-wrap"></div>
     </div>
     <!--content end -->
+    <!-- footer -->
+<div class="height-emulator fl-wrap"></div>
 @endsection

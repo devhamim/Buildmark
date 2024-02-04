@@ -69,11 +69,13 @@
         <div class="clearfix"></div>
         <div class="limit-box fl-wrap"></div>
         <!--content-nav_holder-->
-        
+
         <!-- content-nav_holder end-->
     </section>
     <!-- section end-->
 </div>
 <!-- content end -->
+<!-- footer -->
+<div class="height-emulator fl-wrap"></div>
 
 @endsection

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('allgalleries', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('image')->nullable();
+            $table->string('address')->nullable();
+            $table->longText('description')->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }

@@ -39,7 +39,7 @@
             <!-- policy-box-->
             <div class="policy-box">
                 @if ($setting->first()->footer != null)
-                    <span>{{ $setting->first()->footer }}  Design & Development by <a href="https://nugortech.com/" style="color: #fff">Nugortechit</a></span>
+                    <span>{{ $setting->first()->footer }}  Design & Development by <a href="https://nugortech.com/" style="color: #33c6e8">Nugortechit</a></span>
                 @endif
             </div>
             <!-- policy-box end-->
