@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bg" data-bg="{{ asset('frontend') }}/images/bg/1.jpg"></div>
+            <div class="bg" data-bg="{{ asset('frontend') }}/images/bg/14.jpg"></div>
             <div class="overlay"></div>
             <div class="progress-bar-wrap bot-element">
                 <div class="progress-bar"></div>

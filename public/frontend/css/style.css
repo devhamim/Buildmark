@@ -372,12 +372,12 @@ header.main-header:before {
 .header-logo {
 	float:left;
 	position:relative;
-	top:30px;
+	top:6px;
 }
 .header-logo img {
 	float:left;
 	width: auto;
-	height:50px;
+	height:80px;
 }
 .nav-button-wrap {
 	right:0;
@@ -1515,7 +1515,7 @@ section.parallax-section {
 	padding: 120px 0;
 }
 .small-padding {
-	padding: 50px 0;
+	padding: 15px 0;
 }
 section.small-padding.article{
 	padding: 40px 0;

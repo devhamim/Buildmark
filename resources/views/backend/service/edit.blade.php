@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-12">
                             <label class="form-label">Description</label>
-                            <textarea name="sort_desp" class="form-control form-control-sm">{{ $services->sort_desp }}</textarea>
+                            <textarea name="sort_desp" id="summernote" class="form-control form-control-sm">{!! $services->sort_desp !!}</textarea>
                         </div>
 
                         <div class="col-12">

@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bg" data-bg="{{ asset('frontend') }}/images/bg/1.jpg"></div>
+            <div class="bg" data-bg="{{ asset('frontend') }}/images/bg/12.jpg"></div>
             <div class="overlay"></div>
             <div class="progress-bar-wrap bot-element">
                 <div class="progress-bar"></div>
@@ -87,7 +87,7 @@
 
                                 </div>
                                 <div class="col-lg-12">
-                                    <h3 class="pb-5" style="text-align: left; font-size: 18px; padding-top: 20px">MISSION & VISION</h3>
+                                    <h3 class="pb-5" style="text-align: left; font-size: 25px; font-weight: 800; padding-top: 20px">MISSION & VISION</h3>
                                     <p><strong>* </strong> To establish collaborations that produce creative, economical, high-quality construction that surpasses our clients' expectations in a safe environment.</p>
                                     <p><strong>* </strong> Be a respected, leading regional infrastructure engineering consultant and builder.</p>
                                 </div>

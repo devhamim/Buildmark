@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AchieveController;
+use App\Http\Controllers\allgalleryController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\clientsController;
@@ -81,6 +82,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('index');
             'pricing'      => PricingController::class,
             'privacyPolicy'=> PrivacyPolicyController::class,
             'gallery'      => GalleryController::class,
+            'allgallery'      => allgalleryController::class,
             'achieve'      => AchieveController::class,
             'customerMessage'=> CustomerMessageController::class,
             'products'      => ProductController::class,

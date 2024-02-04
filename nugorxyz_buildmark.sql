@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 28, 2024 at 01:48 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: Feb 03, 2024 at 04:03 PM
+-- Server version: 10.6.16-MariaDB-cll-lve
+-- PHP Version: 8.1.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `buildmark`
+-- Database: `nugorxyz_buildmark`
 --
 
 -- --------------------------------------------------------
@@ -94,8 +94,9 @@ INSERT INTO `banners` (`id`, `title`, `description`, `image`, `status`, `created
 (11, 'PERSONAL AND ELEGANT RESIDENCE', NULL, 'pvgQ8745687.jpg', 1, '2024-01-27 10:01:48', '2024-01-27 11:14:52'),
 (12, 'DESIGN OF CLASSY AND STYLISH BUILDING', NULL, 'O7LxG598733.jpg', 1, '2024-01-27 10:04:03', '2024-01-27 10:04:03'),
 (13, 'DESIGN OF TRISHAL ECONOMIC ZONE DORMITORY BUILDING', NULL, 'SRWjV661566.jpg', 1, '2024-01-27 10:06:32', '2024-01-27 10:06:32'),
-(14, 'DESIGN AND RENOVATION OF FLAT IN DHAKA', NULL, 'aUP4a678854.jpeg', 1, '2024-01-27 10:09:06', '2024-01-27 11:14:27'),
-(15, 'LUXURY DUPLEX DESIGN AND BUILD', NULL, 'uI0Id528384.jpeg', 1, '2024-01-27 10:09:23', '2024-01-27 11:16:04');
+(14, 'DESIGN AND RENOVATION                 OF FLAT IN DHAKA', NULL, 'aUP4a678854.jpeg', 1, '2024-01-27 10:09:06', '2024-02-02 08:46:16'),
+(15, 'LUXURIOUS AND PRIVATE RESIDENCES', NULL, 'HUAIV522988.jpeg', 1, '2024-01-27 10:09:23', '2024-02-02 08:52:06'),
+(16, 'MONUMENT STRUCTURE DESIGN AT BANDARBAN', NULL, 'HOG5B640924.jpeg', 1, '2024-02-02 08:43:20', '2024-02-02 08:43:20');
 
 -- --------------------------------------------------------
 
@@ -561,8 +562,12 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `icon`, `image`, `sort_desp`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'INDUSTRIAL CIVIL ENGINEERING', NULL, 'hehY7130834.jpg', 'Industrial civil engineering requires unique solutions that may have to address vibration, chemical resistance, corrosion, handling of solid and liquid effluent, as well as other functional requirements. Projects often take place in high-risk environments requiring stringent safety, operational and quality control measures. Our knowledgeable project teams understand the requirements of the various plant and process infrastructure in the industrial and mining sectors, which allows them to implement those control measures to ensure that risks are assessed, managed and contained. Our industrial civil engineering services include: all kinds of civil engineering & design consulting, workshops and warehouses, electrical and control buildings, and administration buildings.', NULL, 1, '2024-01-25 03:16:13', '2024-01-25 03:16:13'),
-(2, 'COMMERCIAL BUILDING', NULL, '1NRsc35337.jpg', 'We offer a range of specialist structural engineering, architectural design and consultancy services for commercial buildings ranging from office spaces to mixed-used warehouse buildings, as well as educational buildings and business park developments. As leading engineering consultants, we work alongside architects, structural engineers, and builders to design and develop new building structures or repair structural damage to existing commercial sites. Our services range from initial discussions and consultancy to determine the feasibility of a project, through to the final design.', NULL, 1, '2024-01-25 03:17:03', '2024-01-25 03:17:03');
+(1, 'CONSULTING SERVICES', NULL, 'hehY7130834.jpg', 'Digital Survey - Sub-Soil Investigation - Architectural Design by Registered Architect - Structural Design by Registered Engineer - Plumbing & Electrical Design - Book of quantity (BOQ) - Cost Estimate - Electro-mechanical & Mechanical design - 3D Elevation - Project Management Consulting (PMC) -', NULL, 2, '2024-01-25 03:16:13', '2024-02-02 09:14:31'),
+(2, 'BUILDING & CIVIL INFRASTRUCTURE', NULL, 'Yq4iA285045.jpeg', 'We design sustainable infrastructure that is safe to live in, work in, and engage in. With our experienced expertise, we make sure that the structures are well matched with the structure’s spatial design and aesthetic goals. For our clients, we identify the most effective implementation choices through the use of data modeling, our digital services, and simulations that foresee various conditions and usage scenarios. We are among the leading consultants in complex infrastructure design. We believe in safety first, and we pride ourselves on upholding safety standards pre- and post-construction. Together with our customers, we deliver infrastructure solutions at all levels of scale and complexity. Modern design tools for modeling buildings and civil structures using FEM software, such as ETABS, SAP2000, and Safe, are utilized to maximize the best processes and outcomes. Residential / Commercial buildings - Industrial buildings / Steel structure - Hospitals / Community center / Cyclone center - Cultural and educational buildings - Hotels / Monuments / Mosque / pagoda / temple - Retaining wall / RCC Culverts / Bridges -', NULL, 1, '2024-01-25 03:17:03', '2024-02-02 09:32:33'),
+(3, 'DESIGN / BUILD CONSTRUCTION', NULL, 'klEHh109199.jpeg', 'WE DESIGN / WE BUILD. With a single point of contact for the whole project, Design-Build Construction makes the process simple, clear, and stress-free. Unlike traditional \"design-bid-select-build\" contracts, the design-build delivery method takes advantage of integrating the design, construction, quality, cost, and schedule under one contract. In order to maximize the design and functionality of your project while keeping budget and scheduling considerations in mind, planners, architects, engineers, and contractors collaborate as a team. Advantages include enhanced \"value engineering\" and pre-construction reviews; early knowledge of guaranteed costs; accelerated delivery, increased quality control, lower design and engineering fees, reduced owner risk, and administrative responsibilities. Design-Build generates savings that traditional approaches just cannot beat.', NULL, 1, '2024-01-29 03:03:08', '2024-02-02 09:20:15'),
+(4, 'PROJECT MANAGEMENT CONSULTING (PMC)', NULL, '7pa6i524193.jpg', 'DEDICATED TO ESTABLISHING STRONG RELATIONSHIPS ON ALL CONSTRUCTION PROJECTS, BIG OR SMALL. OUR DESIRE TO DO MORE. Our team supervises every step of the construction process while the client maintains complete financial control over the project. Our ability to customize our services to the requirements of each client sets us apart from other construction management firms. We are aware that no two projects are the same and that every customer has different expectations, goals, and worries. To ensure that our efforts produce the intended results in crucial areas like schedule, cost, design, and construction, we will collaborate closely with your team.', NULL, 2, '2024-01-29 03:03:28', '2024-02-02 09:25:29'),
+(5, 'RENOVATION', NULL, 'y8GsK654673.jpeg', 'SMART BUILDING FROM THE INSIDE. A lot of thought goes into choosing the best method for renovation and interior construction. What size should it be? Which area would be ideal for construction? Will it cause havoc on the roads? Will it be a jewel or a blight? Code compliance, accessibility, and modification must be carefully considered. The renovation construction and interior design of a project are essential. It can be particularly difficult for some people to visualize the inside of a planned area. Our Design-Build team assist all clients, whether they are business executives or civic figures, in physically seeing a project through from the beginning.', NULL, 1, '2024-01-29 03:03:45', '2024-02-02 09:23:13'),
+(6, 'PROJECT MANAGEMENT CONSULTING (PMC)', NULL, 'fS3ZF99873.jpeg', 'DEDICATED TO ESTABLISHING STRONG RELATIONSHIPS ON ALL CONSTRUCTION PROJECTS, BIG OR SMALL. OUR DESIRE TO DO MORE. Our team supervises every step of the construction process while the client maintains complete financial control over the project. Our ability to customize our services to the requirements of each client sets us apart from other construction management firms. We are aware that no two projects are the same and that every customer has different expectations, goals, and worries. To ensure that our efforts produce the intended results in crucial areas like schedule, cost, design, and construction, we will collaborate closely with your team.', NULL, 1, '2024-02-02 09:25:18', '2024-02-02 09:25:18');
 
 -- --------------------------------------------------------
 
@@ -600,7 +605,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `email`, `about`, `number`, `logo`, `footer_logo`, `favicon`, `address`, `footer`, `title`, `meta_title`, `meta_tag`, `meta_description`, `facebook`, `twitter`, `linkedin`, `instagram`, `youtube`, `pinterest`, `created_at`, `updated_at`) VALUES
-(1, 'Build Mark Consultants', 'buildmark.bd@yahoo.com', 'BUILDMARK CONSULTANTS LIMITED is a civil and infrastructure consultancy firm with consulting engineers providing a full range of integrated engineering and related services. Earlier, the firm was known as Buildmark Engineering Limited.', '+01819496499', 'k1swt977026.png', '1o53T556813.png', 'vzHB7556731.png', 'Lev. 01, H 12, R 03, Bosoti Housing, Mirpur-02, Dhaka-1216, Bangladesh', '© 2023 Copyright Build Mark Consultants |', 'Build Mark Consultants', 'Build Mark Consultants company in Bangladesh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-01-27 10:41:09');
+(1, 'Build Mark Consultants', 'buildmark.bd@yahoo.com', 'BUILDMARK CONSULTANTS LIMITED is a civil and infrastructure consultancy firm with consulting engineers providing a full range of integrated engineering and related services. Earlier, the firm was known as Buildmark Engineering Limited.', '+8801819496499', 'k1swt977026.png', '1o53T556813.png', 'vzHB7556731.png', 'Lev. 01, H 12, R 03, Bosoti Housing, Mirpur-02, Dhaka-1216, Bangladesh', '© 2023 Copyright Build Mark Consultants |', 'Build Mark Consultants', 'Build Mark Consultants company in Bangladesh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-02-02 10:23:43');
 
 -- --------------------------------------------------------
 
@@ -625,9 +630,13 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id`, `name`, `post`, `image`, `education`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(10, 'BRIG GEN SYED MD RAFIQUL ISLAM (RETD)', 'CHAIRMAN', 'JNkEM46086.jpeg', NULL, 'Brigadier General Syed Md Rafiqul Islam (Retd) is an exmilitary expert and has long experience in managing several\r\nstate-owned enterprises. Apart from his military expertise,\r\nhe is well experienced in monitoring, supervising and\r\nimplementing many construction Projects of the Army and\r\nthe Government, as he held various important\r\nappointments like; PD, MD, Principal, DG, Station\r\nCommander etc. Among the army projects; a number of\r\nmulti-storied SM Barracks, Officers\' Mess, Officers\' club,\r\nSainik Club, Cantonment market, Gun shed, Ammunition\r\nDump, MT Garage, Swimming pool, Multipurpose shade,\r\nCSD exclusive shop, Cantonment Public School building,\r\nSena Flour Mill etc. are mentionable. As the Managing\r\nDirector of Bangladesh Diesel Plant Ltd, he directly\r\nsupervised many Government DPM projects like;\r\nConstruction of Sheikh Kamal IT Training and Incubation\r\nCentre in 11 districts, Embankment, Land development,\r\nConstructions and Earth protection works of 1320 MW\r\nCoal Fired Thermal Power Plants at Patuakhali under APCL\r\nand RPCL, Management of Quick Rental Power Plant at\r\nNarayanganj etc.', 1, '2024-01-28 05:39:39', '2024-01-28 05:50:04'),
-(11, 'NAZMUL HASSAN', 'MANAGING DIRECTOR', NULL, 'M. ENGG. (STRUCTURE), FIEB ENLISTED RAJUK & CANTT BOARD, DHAKA', 'His professional expertise spans 15+ years, and\r\nhe has worked on high-rise residential and\r\ncommercial projects, industrial projects, cyclone\r\ncenters, monuments, steel structures, and storm\r\nwater treatment plants (STP). In 2007, he\r\ngraduated from AUST with a bachelor of science\r\nin civil engineering. AUST awarded him a\r\nmaster\'s degree in structural engineering as well\r\n(2022). He is a Fellow of the Institute of\r\nEngineers Bangladesh in addition to being an\r\nenlisted engineer with RAJUK and the\r\ncantonment board.', 1, '2024-01-28 05:40:20', '2024-01-28 05:49:49'),
-(12, 'SHAKHILA HASSAN', 'DIRECTOR', 'csLwd199460.jpeg', 'MBA, BBA', 'She is one of the founders of the company. In 2015, he\r\ngraduated from MMC with a bachelor of business\r\nadministration. MMC awarded her a master\'s degree of\r\nbusiness administration in management as well (2018).', 1, '2024-01-28 05:41:07', '2024-01-28 05:49:34');
+(10, 'BRIG GEN SYED MD RAFIQUL ISLAM (RETD)', 'CHAIRMAN', 'JNkEM46086.jpeg', NULL, 'Brigadier General Syed Md Rafiqul Islam (Retd) is an exmilitary expert and has long experience in managing several\r\nstate-owned enterprises. Apart from his military expertise,\r\nhe is well experienced in monitoring, supervising and\r\nimplementing many construction Projects of the Army and\r\nthe Government, as he held various important\r\nappointments like; PD, MD, Principal, DG, Station\r\nCommander etc. Among the army projects; a number of\r\nmulti-storied SM Barracks, Officers\' Mess, Officers\' club,\r\nSainik Club, Cantonment market, Gun shed, Ammunition\r\nDump, MT Garage, Swimming pool, Multipurpose shed,\r\nCSD exclusive shop, Cantonment Public School building,\r\nSena Flour Mill etc. are mentionable. As the Managing\r\nDirector of Bangladesh Diesel Plant Ltd, he directly\r\nsupervised many Government DPM projects like;\r\nConstruction of Sheikh Kamal IT Training and Incubation\r\nCentre in 11 districts, Embankment, Land development,\r\nConstructions and Earth protection works of 1320 MW\r\nCoal Fired Thermal Power Plants at Patuakhali under APCL\r\nand RPCL, Management of Quick Rental Power Plant at\r\nNarayanganj etc.', 1, '2024-01-28 05:39:39', '2024-02-02 09:09:44'),
+(11, 'NAZMUL HASSAN', 'MANAGING DIRECTOR', NULL, 'M. ENGG. (STRUCTURE), FIEB, ENLISTED RAJUK & CANTT BOARD, DHAKA', 'His professional expertise spans 16+ years, and\r\nhe has worked on high-rise residential and\r\ncommercial projects, industrial projects, cyclone\r\ncenters, monuments, steel structures, and storm\r\nwater treatment plants (STP). In 2007, he\r\ngraduated from AUST with a bachelor of science\r\nin civil engineering. AUST awarded him a\r\nmaster\'s degree in structural engineering as well\r\n(2022). He is a Fellow of the Institute of\r\nEngineers Bangladesh in addition to being an\r\nenlisted engineer with RAJUK and the\r\ncantonment board.', 1, '2024-01-28 05:40:20', '2024-02-02 09:11:20'),
+(12, 'SHAKHILA HASSAN', 'DIRECTOR', 'csLwd199460.jpeg', 'MBA, BBA', 'She is one of the founders of the company. In 2015, he\r\ngraduated from MMC with a bachelor of business\r\nadministration. MMC awarded her a master\'s degree of\r\nbusiness administration in management as well (2018).', 1, '2024-01-28 05:41:07', '2024-01-28 05:49:34'),
+(13, 'ABDULLAHEL KAFI', 'DIRECTOR ENGINEERING', 'Splrh977810.jpeg', 'B. SC. ENGG. (CIVIL), FIEB', 'With 18 years of professional experience, he has\r\nworked on high-rise residential and commercial\r\nconstruction projects. He obtained a bachelor of\r\nscience in civil engineering from AUST in 2004.\r\nHe is a Fellow of the Institute of Engineers\r\nBangladesh.', 1, '2024-01-29 02:56:46', '2024-01-29 02:56:46'),
+(14, 'ENGR. GEORGE STEPHEN GHOSH', 'SENIOR CONSULTANT', 'HWKPP46548.jpeg', 'B SC ENGG. CIVIL & WRE (BUET), MIEB', 'With 45 years of professional experience,\r\nhe has worked on flood control, drainage\r\nstructures, sluice gates, and water resource\r\nengineering. He obtained a bachelor of\r\nscience in civil engineering from BUET in\r\n1977. He is a member of the Institute of\r\nEngineers Bangladesh.', 1, '2024-01-29 02:57:19', '2024-01-29 02:57:19'),
+(15, 'ENGR. MD. ABUBAKER SIDDIK', 'DIRECTOR PMC', NULL, 'B. SC. ENGG. (CIVIL), PGD (PMP), PRINCE2, MIEB', 'His professional expertise spans 15+ years\r\nof expanded and glorious working\r\nexperience with renowned local and\r\nmultinational companies. He has working\r\nexperience in residential, commercial, and\r\nindustrial building projects, road\r\nconstruction, warehouses, high-voltage\r\nsubstations, power plants, transmission\r\nlines, jettys, bridges, offshore piling, interior\r\nand renovation projects, etc. He graduated\r\nfrom SUB with a bachelor of science in civil\r\nengineering. Qualify UK awarded him a\r\nPostgraduate Diploma in Project\r\nManagement Professionals (PMP). Also,\r\nAXELOS UK awarded him PRINCE2, and\r\nthe IOSH Board UK awarded him the\r\nManaging Safely certificate. He is a member\r\nof the Institute of Engineers of Bangladesh\r\n(IEB).', 1, '2024-01-29 02:57:57', '2024-01-29 02:57:57'),
+(16, 'MD. MASUD RANA', 'SENIOR ARCHITECT', NULL, 'B. ARCH, MIAB. ENLISTED RAJUK & CANTT BOARD, DHAKA', 'With 13 years of professional experience, he has\r\nworked on concept design, modern architecture,\r\narchitectural working design, exterior and interior\r\ndesign, interior construction, landscape design,\r\n3D Max, and Photoshop. He is a member of the\r\nInstitute of Architects Bangladesh.', 1, '2024-01-29 02:58:22', '2024-01-29 02:58:22');
 
 -- --------------------------------------------------------
 
@@ -921,7 +930,7 @@ ALTER TABLE `achieves`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -1029,7 +1038,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -1041,7 +1050,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`

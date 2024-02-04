@@ -2,32 +2,39 @@
 
 @section('content')
 <div class="dashboard-breadcrumb mb-30">
-    <h2>Service</h2>
+    <h2>Project</h2>
 </div>
 <div class="row g-4">
     <div class="col-xxl-4 col-md-5">
         <div class="panel">
             <div class="panel-header">
-                <h5>Add New Service</h5>
+                <h5>Add New Project</h5>
             </div>
             <div class="panel-body">
-                <form action="{{ route('service.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="row g-3">
 
-                        <div class="col-12">
+                        <div class="col-sm-6">
                             <label class="form-label">Title</label>
                             <input type="text" name="title" class="form-control form-control-sm @error('title') is-invalid @enderror" value="{{ old('title') }}">
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <label class="form-label">Image</label>
                             <input type="file" name="image" class="form-control form-control-sm @error('image') is-invalid @enderror" value="{{ old('image') }}">
                         </div>
-                        <div class="col-12">
-                            <label class="form-label">Description</label>
-                            <textarea name="sort_desp" id="summernote" class="form-control form-control-sm @error('sort_desp') is-invalid @enderror">{{ old('sort_desp') }}</textarea>
+                        <div class="col-sm-6">
+                            <label class="form-label">Gallery</label>
+                            <input type="file" name="gallery[]" multiple class="form-control form-control-sm @error('gallery') is-invalid @enderror" value="{{ old('gallery') }}">
                         </div>
-
+                        <div class="col-sm-6">
+                            <label class="form-label">Address</label>
+                            <input type="text" name="address" class="form-control form-control-sm @error('address') is-invalid @enderror" value="{{ old('address') }}">
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" id="" class="form-control form-control-sm @error('description') is-invalid @enderror" cols="30" rows="5">{{ old('description') }}</textarea>
+                        </div>
                         <div class="col-12 d-flex justify-content-end">
                             <div class="btn-box">
                                 <button type="submit" class="btn btn-sm btn-primary">Save</button>
@@ -42,7 +49,7 @@
     <div class="col-xxl-8 col-md-7">
         <div class="panel">
             <div class="panel-header">
-                <h5>All Service</h5>
+                <h5>All Project</h5>
                 <div class="btn-box d-flex gap-2">
                     <div id="tableSearch"></div>
                     <div class="digi-dropdown dropdown">
@@ -69,27 +76,27 @@
                                     <input class="form-check-input" type="checkbox" id="markAllProduct">
                                 </div>
                             </th>
-                            <th>Sort Description</th>
+                            <th>Address</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($services as $service)
+                        @foreach ($gallerys as $gallery)
                             <tr>
                                 <td>
                                     <div class="table-category-card">
                                         <div class="part-icon">
-                                            <span><img src="{{ asset('uploads/service') }}/{{ $service->image }}" alt=""></span>
+                                            <span><img src="{{ asset('uploads/gallery') }}/{{ $gallery->image }}" alt=""></span>
                                         </div>
-                                        <div class="part-txt" >
-                                            <span class="category-name">{{ $service->title }}</span>
+                                        <div class="part-txt" style="width: 120px">
+                                            <span class="category-name">{{ $gallery->title }}</span>
                                         </div>
                                     </div>
                                 </td>
-                                <td><span class="table-dscr">{{ $service->sort_desp }}</span></td>
+                                <td><span class="table-dscr">{{ $gallery->address }}</span></td>
                                 <td>
-                                    @if ($service->status == 1)
+                                    @if ($gallery->status == 1)
                                         <span class="table-dscr text-success">Active</span>
                                     @else
                                         <span class="table-dscr text-warning">Deactive</span>
@@ -97,8 +104,8 @@
                                 </td>
                                 <td>
                                     <div class="btn-box">
-                                        <a href="{{ route('service.edit', $service->id) }}"><i class="fa-light fa-pen-to-square"></i></a>
-                                        <form action="{{ route('service.destroy',  $service->id) }}" method="POST">
+                                        {{-- <a href="{{ route('gallery.edit', $gallery->id) }}"><i class="fa-light fa-pen-to-square"></i></a> --}}
+                                        <form action="{{ route('gallery.destroy',  $gallery->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class=" border-0 mr-2">

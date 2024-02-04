@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg" data-bg="{{ asset('frontend') }}/images/bg/1.jpg"></div>
+                <div class="bg" data-bg="{{ asset('frontend') }}/images/bg/15.jpg"></div>
                 <div class="overlay"></div>
                 <div class="progress-bar-wrap bot-element">
                     <div class="progress-bar"></div>
@@ -93,9 +93,9 @@
                                             <li>Detail consultancy of the seven storied residential building “Golam Kibria’s Residance” at Kha-200/A, Haji Salimuddin Road, Middle Badda, Dhaka.</li>
                                             <li>Detail structural consultancy of the Bandarban Zila Parishad Monument, Bandarban Zila Parishad. </li>
                                             <li>Detail structural consultancy of the building Gohira Bodhi Bihar, Raozan, Chattogram.</li>
-                                            <li>Detail structural consultancy of G+8 storied residential building for Major General Md Emdad Ul Bari at Plot no 297, Road no 13, Savar DOHS.</li>
+                                            <li>Detail structural consultancy of G+8 storied residential building for Major General Md Emdad Ul Bari (Retd) at Plot no 297, Road no 13, Savar DOHS.</li>
                                             <li>Abul Hossain Chairman Bari Jame Masjid, Champanagar, Naarayangaj</li>
-                                            <li>Detail consultancy of the nine (09) storied residential building for Major Gen Syed MD Rafiqul Islam (RETD) at Plot no.-019, Road no.-304, Sector-11, Jolshiri Abashon, Dhaka......and many more. </li>
+                                            <li>Detail consultancy of the nine (09) storied residential building for Major Gen Syed MD Rafiqul Islam (Retd) at Plot no.-019, Road no.-304, Sector-11, Jolshiri Abashon, Dhaka......and many more. </li>
                                         </ul>
                                     </div>
 
